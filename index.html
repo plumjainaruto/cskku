@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การ์ดวันวาเลนไทน์</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8d7da;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .card {
+            background-color: #ff4d88;
+            color: white;
+            padding: 40px;
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: scale(0);
+            animation: openCard 1s ease-out forwards;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @keyframes openCard {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .heart {
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .message {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="heart">❤️</div>
+        <div class="message">อยากกลับบ้ายไปกอดแฟน จัง
+            <br>
+            OIIIIII
+        </div>
+    </div>
+
+    <script>
+        // สามารถเพิ่มการกระทำเพิ่มเติมในส่วนนี้หากต้องการ
+        window.onload = function() {
+            const card = document.querySelector('.card');
+            card.style.animation = 'openCard 1s ease-out forwards';
+        };
+    </script>
+</body>
+</html>
